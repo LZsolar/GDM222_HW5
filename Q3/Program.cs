@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        int n = int.Parse(Console.ReadLine());
         int m = int.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
         Dictionary<string,string> dict = new Dictionary<string,string>();
         int[] intTrack = new int[n];
         char[] charTrack= new char[m];
@@ -51,10 +51,10 @@ class Program
 
     static string getCode(ref int[] intTrack,ref char[] charTrack,int n,int m){
         string code ="";
-        for(int i=0;i<m;i++){
+        for(int i=m-1;i>=0;i--){
             code = code +charTrack[i];
         }
-        for(int i=0;i<n;i++){
+        for(int i=n-1;i>=0;i--){
             code = code + intTrack[i];
         }
         return code;
